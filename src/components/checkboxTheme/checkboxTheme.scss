@@ -1,0 +1,47 @@
+.toggle {
+  text-align: center;
+}
+.toggle input[type=checkbox] {
+  display: none;
+}
+
+.toggle label {
+  background-color: #777;
+  border: 2px solid #555;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: all ease-in-out 0.3s;
+  width: 100px;
+  height: 50px;
+}
+
+.toggle label::after {
+  background-color: #555;
+  border-radius: 50%;
+  content: ' ';
+  cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  transition: all ease-in-out 0.3s;
+  width: 42px;
+  height: 42px;
+}
+
+.toggle input[type=checkbox]:checked ~ label {
+  background-color: #f2e35b;
+  border-color: #f2e35b;
+}
+
+.toggle input[type=checkbox]:checked ~ label::after {
+  background-color: #968b25;
+  transform: translateX(50px);
+}
+
+.toggle {
+  transform: scale(0.6);
+  margin-left: -15px;
+}
