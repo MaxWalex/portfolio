@@ -4,6 +4,16 @@
     top: 20px;
     display: flex;
     align-items: center;
+    &.online {
+        path {
+            transition: 0.4s;
+            fill: #f2e35b;
+        }
+        a {
+            transition: 0.4s;
+            color: #f2e35bed;
+        }
+    }
     &.offline {
         path {
             transition: 0.4s;
