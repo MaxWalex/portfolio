@@ -1,0 +1,103 @@
+.works {
+    min-height: 100vh;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 3rem;
+    &::before {
+        content: '<section>';
+        top: 40px;
+        left: 10px;
+    }
+    &::after {
+        content: '</section>';
+        bottom: 40px;
+        left: 10px;
+    }
+    .text_zone {
+        margin-bottom: 90px;
+        .text {
+            margin-top: 80px;
+            &::before {
+                content: "<p>";
+            }
+            &::after {
+                content: '</p>';
+            }
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            a {
+                margin: 0;
+            }
+        }
+    }
+    h2 {
+        position: relative;
+        span {
+            display: inline-block;
+            font-size: 103px;
+            font-family: font-file-82132, sans-serif;
+            line-height: 110px;
+            transition: 0.2s;
+            &:hover {
+                animation: AnimateColor 5s linear infinite;
+                color: #f2e35b;
+            }
+            &.letter {
+                color: #00ff0a;
+                animation: AnimateColor 5s linear infinite;
+                position: relative;
+                margin-right: 5px;
+                &::after {
+                    content: 'P';
+                    font-size: 108px;
+                    position: absolute;
+                    color: #000;
+                    left: 8px;
+                    top: 0px;
+                    z-index: -1;
+                }
+            }
+            &.space {
+                margin-left: 20px;
+            }
+        }
+        &::after {
+            content: '<h2>';
+        }
+        &::before {
+            content: '</h2>';
+        }
+    }
+
+    &_portfolio-item {
+        img {
+            width: 100%;
+        }
+        transition: 0.4s;
+        &:hover {
+            
+        }
+    }
+}
+
+
+.my-masonry-grid {
+    display: -webkit-box; /* Not needed if autoprefixing */
+    display: -ms-flexbox; /* Not needed if autoprefixing */
+    display: flex;
+    margin-left: -30px; /* gutter size offset */
+    width: auto;
+  }
+  .my-masonry-grid_column {
+    padding-left: 30px; /* gutter size */
+    background-clip: padding-box;
+  }
+  
+  /* Style your items */
+  .my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+    background: grey;
+    margin-bottom: 30px;
+  }
