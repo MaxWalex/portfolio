@@ -16,6 +16,19 @@ body {
     line-height: 20px;
     color: #fff;
     background-color: #1d1d1d;
+    cursor: none !important;
+    &::-webkit-scrollbar {
+      width: 0;            
+    }
+}
+
+@keyframes AnimateColor {
+  0% {
+      filter: hue-rotate(0deg)
+  }
+  100% {
+      filter: hue-rotate(360deg);
+  }
 }
 
 a {
@@ -23,9 +36,18 @@ a {
     color: inherit;
 }
 
+a,button,li, label {
+  cursor: none !important;
+}
+
 li {
     list-style: none;
 }
+
+section {
+  overflow: hidden;
+}
+
 
 .pseudo_tags {
     position: relative;
@@ -51,6 +73,13 @@ li {
     }
 }
 
+.fullpage_nav {
+  div > div > div {
+    background-color: #f2e35b !important;
+    animation: AnimateColor 5s linear infinite;
+  }
+}
+
 .main_button {
     margin-top: 100px;
     position: relative;
@@ -59,7 +88,6 @@ li {
     background-color: transparent;
     border: solid 1px #f2e35b;
     overflow: hidden;
-    cursor: pointer;
     transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1); // easeOutQuart
     -webkit-mask-image: -webkit-radial-gradient(white, black); // force safari to respect border radius
     
@@ -115,3 +143,13 @@ li {
     }
   }
   
+
+
+@keyframes AnimateColor {
+  0% {
+      filter: hue-rotate(0deg)
+  }
+  100% {
+      filter: hue-rotate(360deg);
+  }
+}
