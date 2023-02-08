@@ -1,4 +1,5 @@
 import React from 'react'
+import MouseEffect from '../llineAnim/LineAnim';
 
 import './introduce.scss';
 import 'animate.css';
@@ -24,7 +25,7 @@ function Introduce() {
             <span className='bouncy' onMouseOver={e => toggleRubberBand(e.target)}>I</span>
             <span className='bouncy' onMouseOver={e => toggleRubberBand(e.target)}>'</span>
             <span className='bouncy' onMouseOver={e => toggleRubberBand(e.target)}>m</span>
-            <span className='space bouncy' onMouseOver={e => toggleRubberBand(e.target)}>M</span>
+            <span className='space bouncy letter' onMouseOver={e => toggleRubberBand(e.target)}>M</span>
             <span className='bouncy' onMouseOver={e => toggleRubberBand(e.target)}>a</span>
             <span className='bouncy' onMouseOver={e => toggleRubberBand(e.target)}>x</span>
             <span className='bouncy' onMouseOver={e => toggleRubberBand(e.target)}>,</span>
@@ -57,6 +58,7 @@ function Introduce() {
           </button>
         </div>
       </div>
+      <MouseEffect />
     </section>
   )
 }
