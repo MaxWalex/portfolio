@@ -8,26 +8,57 @@ nav {
     position: fixed;
     left: 0;
     top: 0;
+    z-index: 100;
     .menu_items {
         text-align: center;
         li {
             cursor: pointer;
             border-top: 1px solid #282828;
+            border-right: none;
             padding: 20px 0;
-            transition: 0.4s;
+            transition: 0.5s;
+            overflow: hidden;
+            --c: #f2e35b;
+            position: relative;
             &:last-child {
                 border-bottom   : 1px solid #282828;
             }
             a {
-                transition: 0.4s;
+                span {
+                    animation: AnimateColor 5s linear infinite;
+                    position: absolute;
+                    width: 30%;
+                    height: 100%;
+                    background-color: var(--c);
+                    transform: translateY(150%);
+                    border-radius: 50%;
+                    left: calc((var(--n) - 1) * 25%);
+                    transition: 0.5s;
+                    transition-delay: calc((var(--n) - 1) * 0.1s);
+                    z-index: -1;
+                }
             }
             &:hover {
-                background: #f2e35b;
-                margin-right: -15px;
+                color: #181818;
+                margin-right: -20px;
                 border-radius: 0 50px 50px 0;
                 a {
-                    color: #181818;
                     font-weight: bold;
+                    span {
+                        transform: translateY(0) scale(2);
+                        &:nth-child(1) {
+                            --n: 1;
+                        }
+                        &:nth-child(2) {
+                            --n: 2;
+                        }
+                        &:nth-child(3) {
+                            --n: 3;
+                        }
+                        &:nth-child(4) {
+                            --n: 4;
+                        }
+                    }
                 }
             }
         }
@@ -46,6 +77,7 @@ nav {
                 transform: translateY(-10px) scale(1.1);
 
                 path {
+                    animation: AnimateColor 5s linear infinite;
                     fill: #f2e35b;
                 }
             }
@@ -58,5 +90,15 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+}
+
+
+@keyframes AnimateColor {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
     }
 }

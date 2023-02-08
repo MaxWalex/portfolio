@@ -3,6 +3,9 @@
 .introduce {
     min-height: 100vh;
     padding: 9rem 3rem;
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
     &::before {
         content: '<html>';
         top: 20px;
@@ -26,7 +29,23 @@
             line-height: 110px;
             transition: 0.2s;
             &:hover {
+                animation: AnimateColor 5s linear infinite;
                 color: #f2e35b;
+            }
+            &.letter {
+                color: #00ff0a;
+                animation: AnimateColor 5s linear infinite;
+                position: relative;
+                margin-right: 5px;
+                &::after {
+                    content: 'M';
+                    font-size: 108px;
+                    position: absolute;
+                    color: #000;
+                    left: 8px;
+                    top: 0px;
+                    z-index: -1;
+                }
             }
             &.space {
                 margin-left: 20px;
@@ -53,5 +72,15 @@
         a + a {
             margin-left: 20px;
         }
+    }
+}
+
+
+@keyframes AnimateColor {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg);
     }
 }
