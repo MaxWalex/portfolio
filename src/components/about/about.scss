@@ -1,0 +1,91 @@
+.about {
+    min-height: 100vh;
+    padding-left: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &::after {
+        content: '</section>';
+        bottom: 50px;
+        left: 10px;
+    }
+    &::before {
+        content: '<section>';
+        top: 50px;
+        left: 10px;
+    }
+    .text_zone {
+        h2 {
+            &::before {
+                content: '<h2>';
+            }
+            &::after {
+                content: '</h2>';
+            }
+            span {
+                display: inline-block;
+                font-size: 103px;
+                font-family: font-file-82132, sans-serif;
+                line-height: 110px;
+                transition: 0.2s;
+                &:hover {
+                    animation: AnimateColor 5s linear infinite;
+                    color: #f2e35b;
+                }
+                &.space {
+                    margin-left: 20px;
+                }
+                &.letter {
+                    color: #00ff0a;
+                    animation: AnimateColor 5s linear infinite;
+                    position: relative;
+                    margin-right: 5px;
+                    &::after {
+                        content: '&';
+                        font-size: 108px;
+                        position: absolute;
+                        color: #000;
+                        left: 8px;
+                        top: 0px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+    .tag-cloud {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        padding-right: 40px;
+    }
+    &_inner {
+        .text {
+            margin: 90px 0;
+            max-width: 700px;
+            width: 100%;
+            &::before {
+                content: '<p>';
+            }
+            &::after {
+                content: '</p>';
+            }
+            p {
+                margin: 15px 0;
+            }
+        }
+    }
+}
+
+
+@keyframes AnimateColor {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
