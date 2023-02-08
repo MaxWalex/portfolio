@@ -1,0 +1,48 @@
+.cursor .ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transition-duration: 500ms;
+    transition-duration: 500ms;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    will-change: width, height, transform, border;
+    z-index: 999;
+    pointer-events: none;
+    background-color: rgba(31, 30, 30, 0.4);
+}
+.dot {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    animation: AnimateColor 5s linear infinite;
+    background-color: #f2e35b;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+}
+.ring.hovered {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+    background-color: rgba(#f2e35b, .5);
+}
+.dot.hovered {
+    display: none;
+}
+
+@keyframes AnimateColor {
+    0% {
+        filter: hue-rotate(0deg)
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
