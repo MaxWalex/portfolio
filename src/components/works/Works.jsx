@@ -31,6 +31,9 @@ function Works() {
         return  <div className='works_portfolio-item' key={title}>
                     <a href={link} target="_blank">
                         <img src={photo} alt={title} />
+                        <div className="works_portfolio-item--hover">
+                            <span>visit <br /> project</span>
+                        </div>
                     </a>
                 </div>
     })
@@ -63,7 +66,7 @@ function Works() {
 
                 <div className="works_portfolio">
                     <Masonry
-                        breakpointCols={3}
+                        breakpointCols={2}
                         className="my-masonry-grid"
                         columnClassName="my-masonry-grid_column"
                     >

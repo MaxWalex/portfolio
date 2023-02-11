@@ -15,8 +15,7 @@ function About() {
 
   const data = [
     { value: 'JavaScript', count: 38 },
-    { value: 'React', count: 30 },
-    { value: 'Express.js', count: 25 },
+    { value: 'React Js', count: 30 },
     { value: 'HTML5', count: 33 },
     { value: 'CSS3', count: 20 },
     { value: 'PHP', count: 18 },
@@ -27,6 +26,7 @@ function About() {
     { value: 'Webpack', count: 34 },
     { value: 'WordPress', count: 43 },
     { value: 'OpenCart', count: 11 },
+    { value: 'npm', count: 26 },
   ]
 
   return (

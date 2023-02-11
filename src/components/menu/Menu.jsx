@@ -1,5 +1,8 @@
+import { Link, animateScroll as scroll } from "react-scroll";
+
 import Links from './Links'
 import CheckboxTheme from '../checkboxTheme/CheckboxTheme';
+
 import './menu.scss'
 
 function Menu() {
@@ -9,26 +12,26 @@ function Menu() {
         <CheckboxTheme />
 
         <ul className='menu_items'>
-          <li><a href="#">About
+          <li><Link href="#">Introduce
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            </a>
+            </Link>
           </li>
-          <li><a href="#">Works
+          <li><Link href="#">About
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            </a>
+            </Link>
           </li>
-          <li><a href="#">Contacts
+          <li><Link href="#">Works
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            </a>
+            </Link>
           </li>
         </ul>
         <Links />
