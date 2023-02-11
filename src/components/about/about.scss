@@ -1,6 +1,7 @@
 .about {
     min-height: 100vh;
     padding-left: 3rem;
+    padding-right: 3rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,7 +61,6 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 15px;
-        padding-right: 40px;
     }
     &_inner {
         .text {

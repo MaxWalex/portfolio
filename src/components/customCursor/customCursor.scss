@@ -1,20 +1,20 @@
-.cursor .ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-    will-change: width, height, transform, border;
-    z-index: 999;
-    pointer-events: none;
-    background-color: rgba(31, 30, 30, 0.4);
-}
+// .cursor .ring {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 30px;
+//     height: 30px;
+//     border-radius: 100%;
+//     transform: translate(-50%, -50%);
+//     -webkit-transition-duration: 500ms;
+//     transition-duration: 500ms;
+//     -webkit-transition-timing-function: ease-out;
+//     transition-timing-function: ease-out;
+//     will-change: width, height, transform, border;
+//     z-index: 999;
+//     pointer-events: none;
+//     background-color: rgba(31, 30, 30, 0.4);
+// }
 .dot {
     position: fixed;
     top: 50%;
