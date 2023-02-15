@@ -17,6 +17,8 @@ import img16 from '../../images/bowa.png';
 import img17 from '../../images/health.png';
 import img18 from '../../images/svit.png';
 import img19 from '../../images/rootz.png';
+import img20 from '../../images/golden.png';
+import img21 from '../../images/bloss.png';
 
 import Masonry from 'react-masonry-css'
 
@@ -54,6 +56,8 @@ function Works({popupActive, setPopupActive}) {
         {photo: img17, link: 'https://healthfit.com.ua/', title: 'health'},
         {photo: img18, link: 'https://svitson.com.ua/', title: 'svit'},
         {photo: img19, link: 'https://rootz-gkkyece26-maxwalex.vercel.app/', title: 'rootz'},
+        {photo: img20, link: 'https://goldenflora.com.ua/', title: 'golden'},
+        {photo: img21, link: 'https://www.blosssales.com/', title: 'bloss'},
     ]
 
     
