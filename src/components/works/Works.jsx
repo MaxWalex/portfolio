@@ -19,6 +19,7 @@ import img18 from '../../images/svit.png';
 import img19 from '../../images/rootz.png';
 import img20 from '../../images/golden.png';
 import img21 from '../../images/bloss.png';
+import img22 from '../../images/1010.png';
 
 import Masonry from 'react-masonry-css'
 
@@ -58,6 +59,7 @@ function Works({popupActive, setPopupActive}) {
         {photo: img19, link: 'https://rootz-gkkyece26-maxwalex.vercel.app/', title: 'rootz'},
         {photo: img20, link: 'https://goldenflora.com.ua/', title: 'golden'},
         {photo: img21, link: 'https://www.blosssales.com/', title: 'bloss'},
+        {photo: img22, link: '#', title: '1010'},
     ]
 
     
