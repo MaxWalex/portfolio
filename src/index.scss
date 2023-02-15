@@ -73,8 +73,9 @@ section {
     }
 }
 
-.fullpage_nav {
-  div > div > div {
+.app_content .Navigation {
+  right: 0 !important;
+  a {
     background-color: #f2e35b !important;
     animation: AnimateColor 5s linear infinite;
   }

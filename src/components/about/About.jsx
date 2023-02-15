@@ -30,7 +30,7 @@ function About() {
   ]
 
   return (
-    <section className='about pseudo_tags'>
+    <div className='about pseudo_tags'>
         <div className="about_inner">
             <div className="text_zone">
                 <h2 className='pseudo_tags'>
@@ -64,7 +64,7 @@ function About() {
             hue: '#00ff0a',
           }}
         />
-    </section>
+    </div>
   )
 }
 

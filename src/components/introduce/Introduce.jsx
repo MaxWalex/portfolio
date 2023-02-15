@@ -14,7 +14,7 @@ function Introduce() {
   }
 
   return (
-    <section className='introduce pseudo_tags'>
+    <div className='introduce pseudo_tags'>
       <div className="introduce_inner">
         <div className="text_zone">
           <h1 className='pseudo_tags'>
@@ -59,7 +59,7 @@ function Introduce() {
         </div>
       </div>
       <MouseEffect />
-    </section>
+    </div>
   )
 }
 

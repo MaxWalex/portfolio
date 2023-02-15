@@ -1,39 +1,38 @@
-import { Link, animateScroll as scroll } from "react-scroll";
-
 import Links from './Links'
 import CheckboxTheme from '../checkboxTheme/CheckboxTheme';
+import MenuItem from './MenuItem';
 
 import './menu.scss'
 
 function Menu() {
+
+  const data = [
+    {
+        title: 'Introduce',
+        to: 'introduce'
+    },
+    {
+        title: 'About',
+        to: 'about'
+    },
+    {
+        title: 'Works',
+        to: 'works'
+    }
+  ]
+
+  const menuView = data.map(({title, to}) => {
+    return <MenuItem key={title} title={title} to={to} />
+  })
 
   return (
     <nav>
         <CheckboxTheme />
 
         <ul className='menu_items'>
-          <li><Link href="#">Introduce
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            </Link>
-          </li>
-          <li><Link href="#">About
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            </Link>
-          </li>
-          <li><Link href="#">Works
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            </Link>
-          </li>
+          {menuView}
         </ul>
+
         <Links />
     </nav>
   )
