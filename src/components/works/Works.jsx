@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import img1 from '../../images/Screenshot_1.png';
 import img2 from '../../images/Screenshot_7.png';
 import img3 from '../../images/athena.png';
@@ -24,8 +22,7 @@ import Masonry from 'react-masonry-css'
 
 import './works.scss';
 
-function Works() {
-    const [popupActive, setPopupActive] = useState(false)
+function Works({popupActive, setPopupActive}) {
 
     function toggleRubberBand(bouncy){
         bouncy.classList.add("bouncing");

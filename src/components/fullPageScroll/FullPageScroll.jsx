@@ -1,5 +1,6 @@
-// import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from '@ap.cx/react-fullpage';
+import { useState } from 'react';
 import {SectionsContainer as Sections, Section} from 'react-fullpage';
+
 
 import Menu from '../menu/Menu';
 import Sound from '../Sound/Sound';
@@ -10,9 +11,11 @@ import Works from '../works/Works';
 
 function FullPageScroll() {
 
+    const [popupActive, setPopupActive] = useState(false)
+
     let options = {
         activeClass:          'active', // the class that is appended to the sections links
-        anchors:              ['introduce', 'about', 'works'], // the anchors for each sections
+        anchors:              !popupActive ? ['introduce', 'about', 'works'] : [], // the anchors for each sections
         arrowNavigation:      true, // use arrow keys
         className:            'SectionContainer', // the class name for the section container
         delay:                1000, // the scroll animation speed
@@ -35,7 +38,7 @@ function FullPageScroll() {
                 <Sections {...options}>
                     <Section><Introduce /></Section>
                     <Section><About /></Section>
-                    <Section><Works /></Section>
+                    <Section><Works popupActive={popupActive} setPopupActive={setPopupActive} /></Section>
                 </Sections>
                 
             </div>
