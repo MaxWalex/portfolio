@@ -1,54 +1,45 @@
-import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from '@ap.cx/react-fullpage';
+// import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation } from '@ap.cx/react-fullpage';
+import {SectionsContainer as Sections, Section} from 'react-fullpage';
+
 import Menu from '../menu/Menu';
 import Sound from '../Sound/Sound';
 import Introduce from '../introduce/Introduce';
 import CustomCursor from '../customCursor/CustomCursor';
-import MouseContextProvider from '../../context/MouseContext';
 import About from '../about/About';
 import Works from '../works/Works';
 
 function FullPageScroll() {
-    const fullPageStyle = {
-        position: 'fixed',
-        right: 0,
-        top: 0,
-        width: '90%',
-        height: '100%'
-    }
+
+    let options = {
+        activeClass:          'active', // the class that is appended to the sections links
+        anchors:              ['introduce', 'about', 'works'], // the anchors for each sections
+        arrowNavigation:      true, // use arrow keys
+        className:            'SectionContainer', // the class name for the section container
+        delay:                1000, // the scroll animation speed
+        navigation:           true, // use dots navigatio
+        scrollBar:            false, // use the browser default scrollbar
+        sectionClassName:     'Section', // the section class name
+        sectionPaddingTop:    '0', // the section top padding
+        sectionPaddingBottom: '0', // the section bottom padding
+        verticalAlign:        true // align the content of each section vertical
+      };
 
     return (
-        <Fullpage style={fullPageStyle}>
-            <div className='fullpage_nav'>
-                <FullpageNavigation />
+        <div className="App">
+            <Menu />
+            <CustomCursor />
+            
+            <div className='app_content'>
+                <Sound />
+
+                <Sections {...options}>
+                    <Section><Introduce /></Section>
+                    <Section><About /></Section>
+                    <Section><Works /></Section>
+                </Sections>
+                
             </div>
-            <MouseContextProvider>
-                <div className="App">
-                    <Menu />
-                    <CustomCursor />
-                    
-                    <div className='app_content'>
-                        <Sound />
-                        
-                        <FullPageSections>
-
-                            <FullpageSection style={{height: '100vh'}}>
-                                <Introduce />
-                            </FullpageSection>
-
-                            <FullpageSection style={{height: '100vh'}}>
-                                <About />
-                            </FullpageSection>
-
-                            <FullpageSection style={{height: '100vh'}}>
-                                <Works />
-                            </FullpageSection>
-                                        
-                        </FullPageSections>
-                        
-                    </div>
-                </div>
-            </MouseContextProvider>
-        </Fullpage>
+        </div>
     )
 }
 
